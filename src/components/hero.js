@@ -11,10 +11,10 @@ const Hero = () => {
       </div>
       <p className="mt-6 text-xl">Land of Wood and Water</p>
       <div className="mt-8">
-        <button className="bg-green-500 px-4 py-2 mx-2 rounded hover:bg-green-700">
+        <button className="bg-green-500 px-6 py-3 mx-2 rounded hover:bg-green-700">
           Stake Now
         </button>
-        <button className="bg-yellow-500 px-4 py-2 mx-2 rounded hover:bg-yellow-700">
+        <button className="bg-yellow-500 px-6 py-3 mx-2 rounded hover:bg-yellow-700">
           Explore Tokenomics
         </button>
       </div>
