@@ -6,7 +6,7 @@ Branch: `rebuild/xaymaca-v2`
 ## Global constraints
 
 - Preserve Git history; do not rewrite `main`.
-- Modernize the old project while retaining XAYMACA branding and the latest historical token specification: 1.3B XAY total supply; 400M public sale, 250M DAO treasury, 450M staking rewards, 100M ecosystem growth, 100M team/advisors; no minting after deployment.
+- Modernize the old project while retaining XAYMACA branding and the latest evidenced token specification: 1B XAY total supply; 400M public sale, 250M DAO treasury, 150M staking rewards, 100M ecosystem growth, 100M team/advisors; no minting after deployment.
 - Implement the historical 1% transfer-burn concept with an explicit tested minimum-supply floor.
 - Polygon remains the preferred production chain, but local/testnet validation comes first.
 - No private keys, seed phrases, production secrets, or service-role keys in Git.
@@ -76,7 +76,7 @@ Branch: `rebuild/xaymaca-v2`
 
 ### Produces
 - Solidity/OpenZeppelin token
-- 1.3B fixed supply
+- 1B fixed supply
 - historical allocation model
 - 1% non-mint/non-burn transfer burn
 - public self-burn
