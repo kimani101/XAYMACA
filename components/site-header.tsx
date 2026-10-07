@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WalletConnect } from "@/components/wallet-connect";
 
 const navItems = [
   ["About", "/about"],
@@ -26,12 +27,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Link
-          href="/staking"
-          className="rounded-full border border-[var(--xay-green)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[var(--xay-green)]"
-        >
-          Open app
-        </Link>
+        <WalletConnect />
       </div>
       <nav aria-label="Mobile navigation" className="mx-auto flex max-w-7xl gap-5 overflow-x-auto px-6 pb-3 text-xs text-[var(--muted)] md:hidden">
         {navItems.map(([label, href]) => (
