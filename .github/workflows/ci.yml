@@ -1,0 +1,24 @@
+name: XAYMACA CI
+
+on:
+  push:
+    branches:
+      - rebuild/xaymaca-v2
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Foundation tests
+        run: node --test tests/foundation.test.mjs
