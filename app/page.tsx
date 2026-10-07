@@ -3,7 +3,7 @@ import Link from "next/link";
 const pillars = [
   {
     title: "Transparent tokenomics",
-    body: "One billion XAY with a documented allocation model and a tested 1% transfer-burn design.",
+    body: "1.3 billion XAY with a documented allocation model, no post-deployment minting, and a tested 1% transfer-burn design.",
   },
   {
     title: "Staking",
