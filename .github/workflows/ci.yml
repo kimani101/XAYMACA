@@ -44,3 +44,6 @@ jobs:
 
       - name: Contract tests
         run: npm run contracts:test
+
+      - name: Simulated core deployment
+        run: npm run contracts:deploy:simulated
