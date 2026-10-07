@@ -98,19 +98,19 @@ export default buildModule("XaymacaCore", (m) => {
     timelock,
     "grantRole",
     [PROPOSER_ROLE, governor],
-    { from: deployer, id: "grant-governor-proposer" },
+    { from: deployer, id: "grant_governor_proposer" },
   );
   const grantCanceller = m.call(
     timelock,
     "grantRole",
     [CANCELLER_ROLE, governor],
-    { from: deployer, id: "grant-governor-canceller" },
+    { from: deployer, id: "grant_governor_canceller" },
   );
   const grantExecutor = m.call(
     timelock,
     "grantRole",
     [EXECUTOR_ROLE, zeroAddress],
-    { from: deployer, id: "open-timelock-execution" },
+    { from: deployer, id: "open_timelock_execution" },
   );
 
   m.call(
@@ -119,7 +119,7 @@ export default buildModule("XaymacaCore", (m) => {
     [DEFAULT_ADMIN_ROLE, deployer],
     {
       from: deployer,
-      id: "renounce-temporary-timelock-admin",
+      id: "renounce_temporary_timelock_admin",
       after: [grantProposer, grantCanceller, grantExecutor],
     },
   );
