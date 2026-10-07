@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# XAYMACA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+XAYMACA is a Web3 project built around the XAY token, staking/liquidity incentives, and DAO governance. The application is being rebuilt from the original 2024 prototype with a modern Next.js, TypeScript, wagmi, viem, Hardhat, and OpenZeppelin stack.
 
-## Available Scripts
+## Current specification
 
-In the project directory, you can run:
+- Token: **Xaymaca (XAY)**
+- Network direction: **Polygon / EVM**, with local and testnet validation before production
+- Fixed supply: **1,300,000,000 XAY**
+- Public sale: **400,000,000 XAY**
+- DAO treasury: **250,000,000 XAY**
+- Staking rewards: **450,000,000 XAY**
+- Ecosystem growth: **100,000,000 XAY**
+- Team & advisors: **100,000,000 XAY**
+- Transfer burn: **1%** until total supply reaches **30,000,000 XAY**
+- Post-deployment minting: **disabled**
+- Governance token behavior: **ERC20Votes-compatible**
 
-### `npm start`
+No production contract addresses are currently committed. The UI intentionally shows staking and governance as undeployed until verified contracts exist.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Development
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+npm run dev
+```
 
-### `npm test`
+Verification:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm test
+npm run typecheck
+npm run lint
+npm run build
+npm run contracts:compile
+npm run contracts:test
+```
 
-### `npm run build`
+Environment-variable names are documented in `.env.example`. Never commit private keys, seed phrases, deployer credentials, or production secrets.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Repository status
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Active rebuild work is isolated on `rebuild/xaymaca-v2` until verification is complete. The original Git history remains intact.
