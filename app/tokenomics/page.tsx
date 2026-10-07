@@ -1,20 +1,20 @@
 import { PageShell } from "@/components/page-shell";
 
 const allocations = [
-  ["Public Sale", "400,000,000 XAY", "40%"],
-  ["DAO Treasury", "250,000,000 XAY", "25%"],
-  ["Staking Rewards", "150,000,000 XAY", "15%"],
-  ["Ecosystem Growth", "100,000,000 XAY", "10%"],
-  ["Team & Advisors", "100,000,000 XAY", "10%"],
+  ["Public Sale", "400,000,000 XAY", "30.77%"],
+  ["DAO Treasury", "250,000,000 XAY", "19.23%"],
+  ["Staking Rewards", "450,000,000 XAY", "34.62%"],
+  ["Ecosystem Growth", "100,000,000 XAY", "7.69%"],
+  ["Team & Advisors", "100,000,000 XAY", "7.69%"],
 ] as const;
 
 export default function TokenomicsPage() {
   return (
-    <PageShell eyebrow="XAY supply" title="1,000,000,000 XAY">
+    <PageShell eyebrow="XAY supply" title="1,300,000,000 XAY">
       <p>
-        The latest approved XAYMACA tokenomics define a fixed one-billion-token
-        supply. The planned token contract includes a 1% transfer burn on
-        ordinary transfers, protected by a minimum-supply safety floor.
+        The latest XAYMACA contract specification defines a fixed 1.3-billion-token
+        supply with no minting after deployment. Ordinary transfers use a 1% transfer burn
+        until total supply reaches the hard 30,000,000 XAY minimum.
       </p>
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {allocations.map(([name, amount, share]) => (
@@ -28,9 +28,10 @@ export default function TokenomicsPage() {
       <div className="mt-8 rounded-3xl border border-[var(--xay-green)]/50 bg-[var(--surface)] p-6">
         <h2 className="text-lg font-bold text-white">Burn mechanics</h2>
         <p className="mt-2 text-base">
-          The historical design uses a 1% transfer burn. The exact production
-          minimum-supply floor will be locked and documented before deployment;
-          earlier project work referenced roughly 30–31 million XAY.
+          The historical design uses a 1% transfer burn with a hard 30,000,000 XAY
+          minimum supply. If a normal burn would cross that floor, only the remaining
+          amount down to the floor is burned; transfers after the floor is reached no
+          longer burn supply.
         </p>
       </div>
     </PageShell>
