@@ -130,25 +130,7 @@ export function StakingDashboard() {
 
   async function submitWrite(
     action: string,
-    request:
-      | {
-          address: `0x${string}`;
-          abi: typeof xaymacaTokenAbi;
-          functionName: "approve";
-          args: readonly [`0x${string}`, bigint];
-        }
-      | {
-          address: `0x${string}`;
-          abi: typeof xaymacaStakingAbi;
-          functionName: "stake" | "withdraw";
-          args: readonly [bigint];
-        }
-      | {
-          address: `0x${string}`;
-          abi: typeof xaymacaStakingAbi;
-          functionName: "getReward" | "compoundReward";
-          args?: readonly [];
-        },
+    request: Parameters<typeof writeContract.mutateAsync>[0],
   ) {
     setLastAction(action);
     setTransactionHash(undefined);
