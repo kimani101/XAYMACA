@@ -27,14 +27,14 @@ test("public site exposes all core XAYMACA routes", async () => {
   }
 });
 
-test("tokenomics page reflects the latest approved 1.3B XAY allocation", async () => {
+test("tokenomics page reflects the approved 1B XAY allocation", async () => {
   const tokenomics = await source("app/tokenomics/page.tsx");
 
   for (const expected of [
-    "1,300,000,000",
+    "1,000,000,000",
     "400,000,000",
     "250,000,000",
-    "450,000,000",
+    "150,000,000",
     "100,000,000",
     "1% transfer burn",
     "30,000,000",
