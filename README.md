@@ -6,10 +6,10 @@ XAYMACA is a Web3 project built around the XAY token, staking/liquidity incentiv
 
 - Token: **Xaymaca (XAY)**
 - Network direction: **Polygon / EVM**, with local and testnet validation before production
-- Fixed supply: **1,300,000,000 XAY**
+- Fixed supply: **1,000,000,000 XAY**
 - Public sale: **400,000,000 XAY**
 - DAO treasury: **250,000,000 XAY**
-- Staking rewards: **450,000,000 XAY**
+- Staking rewards: **150,000,000 XAY**
 - Ecosystem growth: **100,000,000 XAY**
 - Team & advisors: **100,000,000 XAY**
 - Transfer burn: **1%** until total supply reaches **30,000,000 XAY**
