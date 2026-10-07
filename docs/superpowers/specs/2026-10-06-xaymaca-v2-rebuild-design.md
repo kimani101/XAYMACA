@@ -5,7 +5,7 @@ Branch: `rebuild/xaymaca-v2`
 
 ## 1. Purpose
 
-Rebuild XAYMACA from the current incomplete Create React App prototype into a maintainable Web3 application while preserving the XAYMACA brand, the existing XAY concept, and the stated 1,300,000,000 XAY total supply.
+Rebuild XAYMACA from the current incomplete Create React App prototype into a maintainable Web3 application while preserving the XAYMACA brand, the existing XAY concept, and the stated 1,000,000,000 XAY total supply.
 
 The current repository contains useful branding and early UI concepts, but it is missing required dependencies, complete pages, production styling, smart contracts, staking logic, governance logic, deployment configuration, meaningful tests, and a secure Web3 integration layer.
 
@@ -124,8 +124,8 @@ Explains:
 
 #### Tokenomics
 Shows:
-- 1,300,000,000 XAY total supply.
-- allocation model: Public Sale 400M, DAO Treasury 250M, Staking Rewards 450M, Ecosystem Growth 100M, Team & Advisors 100M.
+- 1,000,000,000 XAY total supply.
+- allocation model: Public Sale 400M (40%), DAO Treasury 250M (25%), Staking Rewards 150M (15%), Ecosystem Growth 100M (10%), Team & Advisors 100M (10%).
 - 1% transfer burn behavior once the corresponding contract behavior exists and tests pass.
 - DAO-authorized additional burns only through governance-controlled execution.
 - contract address and explorer link once deployed.
@@ -232,8 +232,8 @@ Contracts will use Solidity and OpenZeppelin.
 
 Initial requirements:
 - ERC-20 compatible XAY token named Xaymaca with symbol XAY and 18 decimals.
-- fixed supply of 1,300,000,000 XAY with no minting after deployment.
-- initial distribution targets: 400M Public Sale, 250M DAO Treasury, 450M Staking Rewards, 100M Ecosystem Growth, and 100M Team & Advisors.
+- fixed supply of 1,000,000,000 XAY with no minting after deployment.
+- initial distribution targets: 400M Public Sale, 250M DAO Treasury, 150M Staking Rewards, 100M Ecosystem Growth, and 100M Team & Advisors.
 - 1% burn on non-mint/non-burn transfers, subject to a minimum-supply safety floor.
 - public self-burn support.
 - deployment/distribution behavior explicitly tested.
