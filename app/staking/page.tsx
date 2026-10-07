@@ -6,8 +6,9 @@ export default function StakingPage() {
     <PageShell eyebrow="Staking" title="Stake XAY">
       <p className="mb-8">
         The staking dashboard reads directly from the configured XAY and
-        staking contracts. Until verified deployment addresses exist for the
-        connected network, transaction controls remain unavailable.
+        staking contracts. If verified deployment addresses are absent for the
+        connected network, staking is not yet deployed and transaction controls
+        remain unavailable.
       </p>
       <StakingDashboard />
     </PageShell>
