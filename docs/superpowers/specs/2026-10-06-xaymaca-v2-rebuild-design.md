@@ -5,7 +5,7 @@ Branch: `rebuild/xaymaca-v2`
 
 ## 1. Purpose
 
-Rebuild XAYMACA from the current incomplete Create React App prototype into a maintainable Web3 application while preserving the XAYMACA brand, the existing XAY concept, and the stated 300,000,000 XAY total supply.
+Rebuild XAYMACA from the current incomplete Create React App prototype into a maintainable Web3 application while preserving the XAYMACA brand, the existing XAY concept, and the stated 1,000,000,000 XAY total supply.
 
 The current repository contains useful branding and early UI concepts, but it is missing required dependencies, complete pages, production styling, smart contracts, staking logic, governance logic, deployment configuration, meaningful tests, and a secure Web3 integration layer.
 
@@ -124,9 +124,10 @@ Explains:
 
 #### Tokenomics
 Shows:
-- 300,000,000 XAY total supply.
-- allocation model only when allocation values are explicitly defined and encoded in project documentation/contracts.
-- burn behavior only after corresponding contract behavior exists.
+- 1,000,000,000 XAY total supply.
+- allocation model: Public Sale 400M (40%), DAO Treasury 250M (25%), Staking Rewards 150M (15%), Ecosystem Growth 100M (10%), Team & Advisors 100M (10%).
+- 1% transfer burn behavior once the corresponding contract behavior exists and tests pass.
+- DAO-authorized additional burns only through governance-controlled execution.
 - contract address and explorer link once deployed.
 
 No tokenomics chart may imply allocations that have not been formally defined.
@@ -230,13 +231,17 @@ Contracts will use Solidity and OpenZeppelin.
 ### 8.1 XaymacaToken
 
 Initial requirements:
-- ERC-20 compatible XAY token.
-- fixed maximum supply of 300,000,000 XAY.
+- ERC-20 compatible XAY token named Xaymaca with symbol XAY and 18 decimals.
+- fixed maximum supply of 1,000,000,000 XAY.
+- initial distribution targets: 400M Public Sale, 250M DAO Treasury, 150M Staking Rewards, 100M Ecosystem Growth, and 100M Team & Advisors.
+- 1% burn on non-mint/non-burn transfers, subject to a minimum-supply safety floor.
+- public self-burn support.
+- any additional privileged burn or mint capability must be DAO-governed and constrained by the fixed cap.
 - deployment/distribution behavior explicitly tested.
 - no unlimited hidden mint authority.
 - ownership/admin behavior documented.
 
-The previously discussed transfer-burn design is not treated as active merely because an older concept mentioned it. If retained, it must be separately specified, tested for edge cases, and approved before implementation.
+The historical discussions contain both 30M and approximately 31M XAY minimum-supply references. Because that exact floor was not consistently finalized, the contract will make the floor an explicit immutable deployment parameter and the testnet deployment will document the selected value before any production deployment.
 
 ### 8.2 XaymacaStaking
 
@@ -294,7 +299,7 @@ When an address exists:
 
 The code should initially be EVM-compatible and chain-configurable rather than hard-wired throughout the UI.
 
-Polygon remains a suitable candidate for production, but the first implementation should support local/testnet development before a production-chain decision creates irreversible deployment costs.
+Polygon is the preferred production chain from the earlier project direction. The implementation will remain EVM-configurable and support local/testnet development first so deployment can be validated before production costs are incurred.
 
 The chosen production network must be set centrally in configuration.
 
@@ -527,9 +532,7 @@ The old code does not need to remain copied into the new runtime because Git his
 
 These items are intentionally not guessed:
 
-- exact token allocation percentages.
-- whether the previously discussed 1% transfer burn remains part of XAY v2.
-- exact burn floor/minimum-supply behavior.
+- exact burn floor value (historical discussions referenced 30M and ~31M XAY; implementation will parameterize and test the floor before production).
 - staking reward rate and funding model.
 - lock periods, if any.
 - governance quorum.
