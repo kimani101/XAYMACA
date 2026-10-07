@@ -32,9 +32,9 @@
     "eslint-config-next": "^16.0.0",
     "tailwindcss": "^4.1.14",
     "typescript": "^5.9.3",
-    "@nomicfoundation/hardhat-toolbox-viem": "latest",
-    "@openzeppelin/contracts": "latest",
-    "hardhat": "^3.0.0"
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.7",
+    "@openzeppelin/contracts": "^5.6.1",
+    "hardhat": "^3.18.1"
   },
   "type": "module"
 }
