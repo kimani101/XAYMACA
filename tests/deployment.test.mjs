@@ -36,6 +36,6 @@ test("exposes a simulated deployment verification command", async () => {
 
   assert.equal(
     packageJson.scripts?.["contracts:deploy:simulated"],
-    "hardhat ignition deploy ignition/modules/XaymacaCore.ts --reset",
+    "hardhat ignition deploy ignition/modules/XaymacaCore.ts",
   );
 });
