@@ -56,7 +56,7 @@ contract XaymacaTokenTest {
             "wrong symbol"
         );
         require(token.decimals() == 18, "wrong decimals");
-        require(token.MAX_SUPPLY() == 1_000_000_000 * UNIT, "wrong cap");
+        require(token.MAX_SUPPLY() == 1_300_000_000 * UNIT, "wrong cap");
         require(token.totalSupply() == token.MAX_SUPPLY(), "wrong initial supply");
         require(token.minimumSupply() == FLOOR, "wrong floor");
     }
@@ -72,7 +72,7 @@ contract XaymacaTokenTest {
 
         require(token.balanceOf(address(this)) == 400_000_000 * UNIT, "wrong public allocation");
         require(token.balanceOf(address(treasury)) == 250_000_000 * UNIT, "wrong treasury allocation");
-        require(token.balanceOf(address(staking)) == 150_000_000 * UNIT, "wrong staking allocation");
+        require(token.balanceOf(address(staking)) == 450_000_000 * UNIT, "wrong staking allocation");
         require(token.balanceOf(address(ecosystem)) == 100_000_000 * UNIT, "wrong ecosystem allocation");
         require(token.balanceOf(address(team)) == 100_000_000 * UNIT, "wrong team allocation");
     }
@@ -146,7 +146,7 @@ contract XaymacaTokenTest {
             address(this),
             address(this),
             address(this),
-            1_000_000_001 * UNIT
+            1_300_000_001 * UNIT
         ) {
             reverted = false;
         } catch {
