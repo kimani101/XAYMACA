@@ -11,7 +11,9 @@
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "contracts:compile": "hardhat compile",
+    "contracts:test": "hardhat test solidity"
   },
   "dependencies": {
     "next": "^16.0.0",
@@ -29,6 +31,10 @@
     "eslint": "^9.37.0",
     "eslint-config-next": "^16.0.0",
     "tailwindcss": "^4.1.14",
-    "typescript": "^5.9.3"
-  }
+    "typescript": "^5.9.3",
+    "@nomicfoundation/hardhat-toolbox-viem": "latest",
+    "@openzeppelin/contracts": "latest",
+    "hardhat": "^3.0.0"
+  },
+  "type": "module"
 }

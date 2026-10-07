@@ -38,3 +38,9 @@ jobs:
 
       - name: Production build
         run: npm run build
+
+      - name: Compile contracts
+        run: npm run contracts:compile
+
+      - name: Contract tests
+        run: npm run contracts:test
