@@ -11,11 +11,11 @@ import {Nonces} from "@openzeppelin/contracts/utils/Nonces.sol";
 /// @notice Fixed-supply XAY token with a 1% transfer burn, burn floor, and vote delegation.
 /// @dev There is intentionally no post-deployment mint function.
 contract XaymacaToken is ERC20, ERC20Burnable, ERC20Permit, ERC20Votes {
-    uint256 public constant MAX_SUPPLY = 1_000_000_000 ether;
+    uint256 public constant MAX_SUPPLY = 1_300_000_000 ether;
 
     uint256 public constant PUBLIC_SALE_ALLOCATION = 400_000_000 ether;
     uint256 public constant DAO_TREASURY_ALLOCATION = 250_000_000 ether;
-    uint256 public constant STAKING_REWARDS_ALLOCATION = 150_000_000 ether;
+    uint256 public constant STAKING_REWARDS_ALLOCATION = 450_000_000 ether;
     uint256 public constant ECOSYSTEM_GROWTH_ALLOCATION = 100_000_000 ether;
     uint256 public constant TEAM_ADVISORS_ALLOCATION = 100_000_000 ether;
 
