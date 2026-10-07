@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - rebuild/xaymaca-v2
+      - rebuild/xaymaca-v2-final
   pull_request:
     branches:
       - main
